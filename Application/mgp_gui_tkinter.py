@@ -354,7 +354,7 @@ def programme_principal():
 							#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 							#---------------------------------------------- Gestion de base de données ---------------------------------------
 							cursor = base_de_donnees.cursor()
-							new_user = (etudiant.nom,etudiant.prenom,etudiant.matricule,etudiant.sexe,etudiant.filiere,MGP)
+							new_user = (etudiant.nom,etudiant.prenom,etudiant.matricule,etudiant.filiere,etudiant.sexe,MGP)
 							requete = cursor.execute("INSERT INTO etudiant VALUES(?,?,?,?,?,?)",new_user)
 							base_de_donnees.commit()
 							print(" Nouvel étudiant ajouté ".center(50,"-"))
